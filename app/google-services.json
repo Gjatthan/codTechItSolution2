@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165141485876",
+    "project_id": "newshub-20151",
+    "storage_bucket": "newshub-20151.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165141485876:android:bc7475e451f3231327ed61",
+        "android_client_info": {
+          "package_name": "com.example.newshub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe8i3eMsIzLwLq1G2Ml0fwW3ycSlY9vPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentProfile">
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cardView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:fadingEdgeLength="10dp"
+       android:outlineSpotShadowColor="@color/red_500"
+       app:cardElevation="10dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.000">
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+         <ImageView
+             android:id="@+id/imageView3"
+             android:layout_width="0dp"
+             android:layout_height="40sp"
+             android:layout_weight="1"
+             android:src="@drawable/newshubicn" />
+
+         <TextView
+             android:id="@+id/textView"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight=".9"
+             android:fontFamily="@font/poppins_bold"
+             android:text="My Profile"
+             android:textSize="12sp" />
+
+         <View
+             android:layout_width="0dp"
+             android:layout_height="2dp"
+             android:layout_weight="1.6" />
+
+         <ImageButton
+             android:id="@+id/btnmore"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight=".3"
+             android:background="@android:color/transparent"
+             android:src="@drawable/icnmore"/>
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="121dp"
+       android:elevation="20dp"
+       android:outlineAmbientShadowColor="@android:color/holo_blue_bright"
+       app:cardElevation="20dp"
+       app:layout_constraintBottom_toTopOf="@+id/photoviewrecycle"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.981"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/cardView"
+       app:layout_constraintVertical_bias="0.0">
+
+      <TextView
+          android:id="@+id/btnlout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:fontFamily="@font/poppins_regular"
+          android:text="LogOut"
+          android:visibility="gone"
+          android:textSize="10sp" />
+
+   </androidx.cardview.widget.CardView>
+
+   <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+       android:id="@+id/circularRevealCardView"
+       android:layout_width="70dp"
+       android:layout_height="70dp"
+       app:cardCornerRadius="70dp"
+       app:cardElevation="@dimen/cardview_compat_inset_shadow"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.022"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/cardView"
+       app:layout_constraintVertical_bias="0.037">
+
+      <ProgressBar
+          android:id="@+id/progressimgload"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_gravity="center"
+          android:visibility="gone" />
+
+      <ImageView
+          android:id="@+id/imgprofile"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:scaleType="fitXY"
+          android:src="@drawable/icnprofile" />
+
+      <Button
+          android:id="@+id/btnedit"
+          android:layout_width="match_parent"
+          android:layout_height="25dp"
+          android:layout_marginTop="45dp"
+          android:background="@color/blur"
+          android:fontFamily="@font/poppins_regular"
+          android:padding="0sp"
+          android:text="Edit"
+          android:textSize="10sp" />
+
+
+   </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/linearLayoutCompat2"
+       android:layout_width="wrap_content"
+       android:minWidth="100dp"
+       android:layout_height="96dp"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.102"
+       app:layout_constraintStart_toEndOf="@+id/circularRevealCardView"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.1">
+
+      <TextView
+          android:id="@+id/uname"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:fontFamily="@font/poppins_bold"
+          android:textSize="12sp"
+          android:layout_marginEnd="4dp"/>
+
+      <TextView
+          android:id="@+id/txtgend"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:fontFamily="@font/poppins_regular"
+          android:textSize="12sp" />
+
+      <TextView
+          android:id="@+id/nationality"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:fontFamily="@font/poppins_regular"
+          android:text="India"
+          android:textSize="12sp" />
+   </androidx.appcompat.widget.LinearLayoutCompat>
+
+   <com.google.android.material.divider.MaterialDivider
+       android:layout_width="1dp"
+       android:layout_height="100dp"
+       app:dividerColor="#43191616"
+       app:layout_constraintVertical_bias="0.1"
+       app:layout_constraintHorizontal_bias="0.1"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toTopOf="@+id/materialDivider"
+       app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat2"
+       app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat2"
+       app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/linearLayoutCompat4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.34"
+       app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat2"
+       app:layout_constraintTop_toBottomOf="@+id/cardView"
+       app:layout_constraintVertical_bias="0.056">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/poppins_bold"
+          android:text="Post"
+          android:textSize="12sp" />
+
+      <TextView
+          android:id="@+id/txttotalpost"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/poppins_regular"
+          android:textSize="12sp" />
+
+   </androidx.appcompat.widget.LinearLayoutCompat>
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:fontFamily="@font/poppins_bold"
+       android:text="My Post"
+       android:textSize="12sp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.021"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2"
+       app:layout_constraintVertical_bias="0.02" />
+
+   <com.google.android.material.divider.MaterialDivider
+       android:id="@+id/materialDivider"
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       app:dividerColor="@color/red_200"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView2"
+       app:layout_constraintVertical_bias="0.022"
+       tools:layout_editor_absoluteX="0dp" />
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/floatingActionButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:clickable="true"
+       android:src="@drawable/icnadd"
+       android:onClick="onClickAddPost"
+       app:fabSize="normal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.955"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/materialDivider"
+       app:layout_constraintVertical_bias="0.908" />
+
+   <ImageView
+       android:id="@+id/imggif"
+       android:layout_width="match_parent"
+       android:visibility="gone"
+       android:layout_height="0dp"
+       app:layout_constraintHorizontal_weight="1"
+       app:layout_constraintVertical_bias="0"
+       app:layout_constraintHorizontal_bias="0"
+       android:layout_margin="6dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/materialDivider"/>
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/photoviewrecycle"
+       android:nestedScrollingEnabled="true"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintHorizontal_weight="1"
+       app:layout_constraintVertical_bias="0"
+       app:layout_constraintHorizontal_bias="0"
+       android:layout_margin="6dp"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/materialDivider"/>
+
+   <ProgressBar
+       android:layout_width="25dp"
+       android:layout_height="25dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:id="@+id/progress_circular_delete_post"
+       android:visibility="gone"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
